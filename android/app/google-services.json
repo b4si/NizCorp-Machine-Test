@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013542516175",
+    "project_id": "nizcorp-machine-test",
+    "storage_bucket": "nizcorp-machine-test.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013542516175:android:d61761aadc3569231aceba",
+        "android_client_info": {
+          "package_name": "com.example.nizcorp_machine_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7_S5NdlpHFN-tpMFgEzl-x40kcyVsucs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
