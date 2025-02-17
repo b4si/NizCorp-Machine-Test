@@ -37,9 +37,8 @@ class Task {
     };
   }
 
-  // Convert Task to TreeNode
   TreeNode<String> toTreeNode() {
-    final node = TreeNode<String>(data: title); // Use named parameter `data`
+    final node = TreeNode<String>(data: title);
     node.addAll(subtasks?.map((subtask) => subtask.toTreeNode()) ?? []);
     return node;
   }
@@ -68,9 +67,8 @@ class TaskDate {
     };
   }
 
-  // Convert TaskDate to TreeNode
   TreeNode<String> toTreeNode() {
-    final node = TreeNode<String>(data: date); // Use named parameter `data`
+    final node = TreeNode<String>(data: date);
     node.addAll(tasks.map((task) => task.toTreeNode()));
     return node;
   }

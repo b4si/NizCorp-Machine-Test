@@ -52,14 +52,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     leading: IconButton(
                       onPressed: () async {
                         if (node.level != 1) {
-                          // Assuming that tasks are not at level 1
                           final task = Task(
-                            description:
-                                'Sample Description', // Replace with actual data
-                            taskId: 1, // Replace with actual data
-                            time: 'Sample Time', // Replace with actual data
+                            description: 'Sample Description',
+                            taskId: 1,
+                            time: 'Sample Time',
                             title: node.data ?? 'Sample Title',
-                            subtasks: [], // Replace with actual data
+                            subtasks: [],
                           );
                           await homeController.addTaskToFirestore(task);
                           if (!context.mounted) return;

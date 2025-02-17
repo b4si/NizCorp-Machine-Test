@@ -44,8 +44,8 @@ class HomeController with ChangeNotifier {
   Future<void> scheduleNotification(String taskTitle) async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-      'task_channel', // Channel ID
-      'Task Notifications', // Channel name
+      'task_channel',
+      'Task Notifications',
       importance: Importance.max,
       priority: Priority.high,
     );
@@ -55,9 +55,9 @@ class HomeController with ChangeNotifier {
     );
 
     await flutterLocalNotificationsPlugin.show(
-      0, // Notification ID
-      'Task Added', // Notification title
-      'Task "$taskTitle" has been added.', // Notification body
+      0,
+      'Task Added',
+      'Task "$taskTitle" has been added.',
       platformChannelSpecifics,
     );
   }
@@ -82,12 +82,9 @@ class HomeController with ChangeNotifier {
       final response = await HomeServices().getTask();
 
       if (response.statusCode == 200) {
-        // Decode the JSON string into a List<dynamic>
         List<dynamic> data = json.decode(response.data);
 
-        // Convert the data into a TreeNode
-        final rootNode =
-            TreeNode<String>(data: 'Tasks'); // Use named parameter `data`
+        final rootNode = TreeNode<String>(data: 'Tasks');
         for (var taskDate in data) {
           final taskDateNode = TaskDate.fromJson(taskDate).toTreeNode();
           rootNode.add(taskDateNode);
